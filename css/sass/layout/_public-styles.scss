@@ -1,0 +1,56 @@
+@charset "utf-8";
+// public styles
+*,
+*:after,
+*:before {
+    @include myprefix(box-sizing, border-box, $prefixes);
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    direction: rtl;
+    position: relative;
+    min-height: 100px;
+    font-family: "JF-Flat-regular";
+    min-height: 100px;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    @include myprefix(transition, all .4s ease-in-out, $prefixes);
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    @include myprefix(transition, all ease-in-out .4s, $prefixes);
+}
+
+@font-face {
+    font-family: "JF-Flat-regular";
+    src: url("../fonts/JF-Flat-regular.eot") format("embedded-opentype"), url("../fonts/JF-Flat-regular.woff") format("woff"), url("../fonts/JF-Flat-regular.ttf") format("truetype")
+}

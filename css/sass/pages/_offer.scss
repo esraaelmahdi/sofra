@@ -1,0 +1,23 @@
+//offer
+.offer {
+    padding: 40px 0;
+    h3 {
+        color: $mainColor;
+        padding: 10px;
+        border-right: 1px solid $mainColor;
+    }
+    .m-offer {
+        background-color: $mainColor;
+        color: #fff;
+        margin: 20px auto;
+        padding: 7px 30px;
+        border-radius: 10px;
+        display: inline-block;
+    }
+    .parent {
+        margin-top: 20px;
+        img {
+            max-width: 100%;
+        }
+    }
+}

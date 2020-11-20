@@ -1,0 +1,45 @@
+// contact
+.contact {
+    padding: 40px 0;
+    .myform {
+        background-color: $mainColor;
+        padding: 25px;
+        text-align: center;
+        @include myprefix(border-radius, 10px, $prefixes);
+        h3 {
+            margin: 30px 0;
+            color: #fff;
+        }
+        .t,
+        textarea {
+            display: block;
+            padding: 10px;
+            width: 100%;
+            margin: 10px 0;
+            @include myprefix(border-radius, 10px, $prefixes);
+            outline: none;
+            border: 1px solid rgba(0, 0, 0, .1);
+        }
+        textarea {
+            height: 180px;
+        }
+        .rad {
+            display: inline-block;
+            margin: 20px;
+        }
+        label {
+            color: #fff;
+        }
+        button {
+            display: block;
+            margin: 30px auto;
+            padding: 7px 35px;
+            border: 1px solid #33124e;
+            color: #fff;
+            background-color: #33124e;
+            @include myprefix(border-radius, 10px, $prefixes);
+            outline: none;
+            cursor: pointer;
+        }
+    }
+}

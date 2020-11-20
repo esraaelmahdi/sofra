@@ -1,0 +1,53 @@
+// start meal
+.meal {
+    padding: 40px 0;
+    background: url(../imgs/cart-bg.png) no-repeat center center;
+    @include myprefix(background-size, cover, $prefixes);
+    .meal-content {
+        padding: 20px;
+        margin: 20px 0;
+        background-color: #fff;
+        @include myprefix(box-shadow, 0 0 15px rgba(0, 0, 0, .1), $prefixes);
+        display: block;
+        text-align: center;
+        .img-parent {
+            margin: 10px auto;
+            width: 130px;
+            height: 130px;
+            @include myprefix(border-radius, 50%, $prefixes);
+            padding: 6px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                width: 110px;
+                height: 110px;
+                @include myprefix(border-radius, 50%, $prefixes);
+            }
+        }
+        .data {
+            p {
+                margin: 5px 0;
+            }
+            p:first-child {
+                color: $mainColor;
+            }
+            form {
+                select {
+                    margin: 10px 0;
+                }
+                button {
+                    display: block;
+                    text-align: center;
+                    margin: 5px auto;
+                    padding: 7px 40px;
+                    border: 1px solid $mainColor;
+                    background-color: $mainColor;
+                    color: #fff;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

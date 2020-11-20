@@ -1,0 +1,59 @@
+// contact
+.new-user {
+    padding: 40px 0;
+    background: url(../imgs/bb.png) no-repeat center center;
+    @include myprefix(background-size, cover, $prefixes);
+    .myform {
+        background-color: #fff;
+        padding: 25px;
+        text-align: center;
+        @include myprefix(border-radius, 10px, $prefixes);
+        @include myprefix(box-shadow, 0 0 10px rgba(0, 0, 0, .1), $prefixes);
+        .icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px auto;
+        }
+        .t {
+            display: block;
+            padding: 10px;
+            width: 100%;
+            margin: 10px 0;
+            @include myprefix(border-radius, 10px, $prefixes);
+            outline: none;
+            border: 1px solid rgba(0, 0, 0, .1);
+        }
+        select {
+            width: 100%;
+            outline: none;
+            padding: 10px;
+            border: 1px solid rgba(0, 0, 0, .1);
+        }
+        .agree {
+            margin-top: 20px;
+            color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            label {
+                margin: 3px 20px 0 0;
+            }
+        }
+        button {
+            display: block;
+            margin: 30px auto;
+            padding: 7px 55px;
+            border: 1px solid #33124e;
+            color: #fff;
+            background-color: #33124e;
+            @include myprefix(border-radius, 10px, $prefixes);
+            outline: none;
+            cursor: pointer;
+        }
+    }
+}

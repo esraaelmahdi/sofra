@@ -1,0 +1,114 @@
+// dropdown
+.linkk {
+    color: $mainColor;
+    &:hover,
+    &:focus {
+        color: $mainColor;
+    }
+}
+
+.dropdown-menu {
+    left: 100px !important;
+    top: 20px !important;
+    a {
+        color: #666;
+        font-size: 12px;
+    }
+}
+
+// home
+.home {
+    display: flex;
+    align-items: center;
+    padding: 40px 0;
+    min-height: 100vh - 17;
+    background: url(../imgs/222.jpg) no-repeat center center;
+    @include myprefix(background-size, cover, $prefixes);
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .img-parent {
+            img {
+                width: 160px;
+                height: 160px;
+                border-radius: 50%;
+                border: 1px solid #999;
+                padding: 5px;
+            }
+        }
+        .stars {
+            width: 150px;
+            height: 40px;
+            color: #000;
+            margin-top: 20px;
+            background-color: #fff;
+            border-radius: 20px;
+            line-height: 40px;
+            text-align: center;
+            .red {
+                color: $mainColor;
+            }
+        }
+    }
+}
+
+// food-list
+.food-list {
+    padding: 40px 0;
+    .new-order {
+        a {
+            display: inline-block;
+            color: #fff;
+            background-color: $mainColor;
+            padding: 7px 30px;
+            border-radius: 20px;
+        }
+    }
+    .icon-x {
+        display: inline-block;
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        color: #000;
+        z-index: 999999;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        background-color: #fff;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .order-parent {
+        overflow: hidden;
+        position: relative;
+        margin-top: 20px;
+        padding: 5px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+        border-radius: 10px;
+        .img-parent {
+            position: relative;
+            img {
+                border-radius: 10px;
+                width: 100%;
+                &:hover {
+                    @include myprefix(transform, scale(1.1), $prefixes);
+                }
+            }
+        }
+        .data {
+            text-align: center;
+            padding: 25px 10px;
+            p {
+                line-height: 1.8;
+            }
+            p:first-child {
+                color: $mainColor;
+                font-weight: 700;
+            }
+        }
+    }
+}

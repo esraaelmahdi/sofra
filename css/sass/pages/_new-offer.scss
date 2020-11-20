@@ -1,0 +1,71 @@
+// start new-offer
+.new-offer {
+    padding: 40px 0;
+    h2 {
+        // margin: 10px 0;
+        color: $mainColor;
+        text-align: center;
+    }
+    .myform {
+        margin-top: 20px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        @include myprefix(border-radius, 10px, $prefixes);
+        form {
+            position: relative;
+            .parent {
+                position: relative;
+            }
+            label,
+            input,
+            textarea,
+            img {
+                position: relative;
+                display: block;
+                margin: 30px auto;
+                width: 90%;
+            }
+            label {
+                text-align: center;
+            }
+            img {
+                width: 80px;
+                height: 50px;
+            }
+            input {
+                padding: 10px;
+                border: 1px solid #d8d8d8;
+                &::placeholder {
+                    color: #999;
+                }
+                outline: none;
+            }
+            .one {
+                position: absolute;
+                top: 15px;
+                left: 10%;
+            }
+            .two {
+                position: absolute;
+                top: 15px;
+                left: 10%;
+            }
+            textarea {
+                height: 180px;
+                padding: 10px;
+                resize: none;
+                outline: none;
+                border: 1px solid #d8d8d8;
+            }
+            button {
+                display: block;
+                background-color: $mainColor;
+                padding: 7px 50px;
+                border: 1px solid $mainColor;
+                color: #fff;
+                margin: 20px auto 0;
+                cursor: pointer;
+            }
+        }
+    }
+}

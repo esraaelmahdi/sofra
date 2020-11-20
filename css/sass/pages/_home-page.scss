@@ -1,0 +1,294 @@
+// start home-sec
+.home-sec {
+    position: relative;
+    background: #000 url(../imgs/header.png) fixed no-repeat center center;
+    @include myprefix(background-size, cover, $prefixes);
+    height: 100vh - 17;
+    .overlay {
+        @include overlay;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .content {
+            text-align: center;
+            color: #fff;
+            h1 {
+                font-size: 60px;
+                margin-bottom: 30px;
+                @include myprefix(transform, rotate(-20deg), $prefixes);
+            }
+            p {
+                margin: 10px 0;
+                font-size: 30px;
+            }
+            a {
+                position: relative;
+                display: inline-block;
+                color: #fff;
+                background-color: $mainColor;
+                border: 2px solid rgba(236, 53, 84, 0.8);
+                @include myprefix(border-radius, 40px, $prefixes);
+                padding: 7px 50px;
+                margin: 20px 0 0 0;
+                z-index: 9999;
+                overflow: hidden;
+                &:after {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    display: block;
+                    content: "";
+                    background-color: rgba(236, 53, 84, 0.8);
+                    width: 100%;
+                    height: 100%;
+                    @include myprefix(border-radius, 40px, $prefixes);
+                    @include myprefix(transform, scale(0), $prefixes);
+                    @include myprefix(transition, all ease-in-out 0.6s, $prefixes);
+                    z-index: -1;
+                }
+                &:hover {
+                    background-color: transparent;
+                }
+                &:hover:after {
+                    @include myprefix(transform, scale(1), $prefixes);
+                }
+            }
+        }
+    }
+}
+
+// start best-restaurant
+.best-restaurant {
+    // min-height: 900px;
+    background-color: #ccc;
+    padding: 40px 0;
+    position: relative;
+    // background: #000 url(../imgs/Group.png) no-repeat center center;
+    @include myprefix(background-size, cover, $prefixes);
+    // .overlay {
+    //     min-height: 900px;
+    //     @include overlay;
+    //     background-color: rgba(255, 255, 255, 0.78);
+    //     padding: 40px 0;
+    .title-head {
+        margin-bottom: 15px;
+    }
+    .myform {
+        margin: 20px 0;
+        form {
+            position: relative;
+            select {
+                margin-top: 25px;
+                position: relative;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                -ms-appearance: none;
+                appearance: none;
+                @include myprefix(border-radius, 40px, $prefixes);
+                width: 100%;
+                padding: 10px;
+                border: 1px solid rgba(0, 0, 0, 0.3);
+                outline: none;
+                &:focus,
+                &:active {
+                    border: 1px solid rgba(0, 0, 0, 0.3);
+                    &:after {
+                        font-family: FontAwesome;
+                        content: "\f107";
+                        font-size: 28px;
+                        position: absolute;
+                        top: 12px;
+                        right: 20px;
+                        color: #434b67;
+                        pointer-events: none;
+                    }
+                }
+            }
+            select::-ms-expand {
+                display: none;
+            }
+            input[type="text"] {
+                margin-top: 20px;
+                @include myprefix(border-radius, 40px, $prefixes);
+                position: relative;
+                width: 100%;
+                padding: 14px 10px;
+                border: 1px solid rgba(0, 0, 0, 0.3);
+                font-size: 14px;
+                outline: none;
+                &:focus,
+                &:active {
+                    border: 1px solid rgba(0, 0, 0, 0.3);
+                }
+            }
+            button[type="submit"] {
+                outline: none;
+                position: absolute;
+                left: 17px;
+                top: 12px;
+                border: none;
+                background-color: transparent;
+                height: 93%;
+                padding: 0 20px;
+                color: $mainColor;
+            }
+        }
+    }
+    .content {
+        background-color: #fff;
+        padding: 30px 10px;
+        margin-top: 20px;
+        @include myprefix(border-radius, 20px, $prefixes);
+        img {
+            max-width: 100%;
+        }
+        .data {
+            height: 100%;
+            padding: 0 10px;
+            display: flex;
+            align-items: center;
+            p {
+                margin: 3px 0;
+            }
+            p:first-child {
+                color: $mainColor;
+                font-weight: 700;
+            }
+            .redcolor {
+                color: $mainColor;
+            }
+            @media (max-width: 991px) {
+                justify-content: center;
+                margin: 25px 0;
+            }
+        }
+        .open-close {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            margin-left: 5px;
+            .child-2 {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                span:first-child {
+                    margin-left: 4px;
+                    display: inline-block;
+                    width: 14px;
+                    height: 14px;
+                    background-color: green;
+                    @include myprefix(border-radius, 50%, $prefixes);
+                }
+            }
+            @media (max-width: 991px) {
+                justify-content: center;
+            }
+        }
+        @media (min-width: 992px) {
+            display: flex;
+            justify-content: center;
+        }
+        @media (max-width: 991px) {
+            text-align: center;
+        }
+    }
+    // }
+}
+
+// start our-offers
+.our-offers {
+    padding: 60px 0;
+    background-color: #fff;
+    .img-parent {
+        margin-top: 20px;
+        img {
+            max-width: 100%;
+        }
+    }
+    .second {
+        position: relative;
+        margin-top: 20px;
+        height: 400px;
+        background: url(../imgs/222.jpg) no-repeat center center;
+        @include myprefix(border-radius, 10px, $prefixes);
+        .overlay {
+            text-align: center;
+            @include myprefix(border-radius, 10px, $prefixes);
+            @include overlay;
+            background-color: rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            padding: 30px;
+            p {
+                color: #fff;
+                font-size: 20px;
+                line-height: 2;
+            }
+            a {
+                display: inline-block;
+                margin-top: 20px;
+                padding: 6px 30px;
+                color: #fff;
+                font-size: 19px;
+                background-color: $mainColor;
+                @include myprefix(border-radius, 30px, $prefixes);
+                @include myprefix(box-shadow, 0 0 15px rgba(0, 0, 0, 0.3), $prefixes);
+            }
+        }
+    }
+}
+
+// start our-app
+.our-app {
+    min-height: 400px;
+    position: relative;
+    background: url(../imgs/3333.png) center center no-repeat;
+    @include myprefix(background-size, cover, $prefixes);
+    .overlay {
+        padding: 60px 0;
+        @include overlay;
+        background-color: rgba(0, 0, 0, 0.5);
+        .title {
+            color: #fff;
+            font-size: 25px;
+            margin: 15px 0;
+            h3 {
+                @media (max-width: 600px) {
+                    font-size: 20px;
+                    text-align: center;
+                }
+            }
+        }
+        .aa {
+            height: 100%;
+        }
+        .download-now {
+            margin-top: 50px;
+            a {
+                padding: 15px 100px;
+                display: inline-block;
+                background: url(../imgs/download.png);
+                @include myprefix(border-radius, 40px, $prefixes);
+                &:focus,
+                &:hover {
+                    color: #fff;
+                }
+            }
+            @media (max-width: 600px) {
+                display: flex;
+                justify-content: center;
+            }
+        }
+        .app {
+            display: flex;
+            justify-content: flex-end;
+            img {
+                width: 340px;
+                @media (max-width: 767px) {
+                    width: 220px;
+                }
+            }
+        }
+    }
+}
